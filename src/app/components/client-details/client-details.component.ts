@@ -21,7 +21,7 @@ export class ClientDetailsComponent implements OnInit {
     private clientService: ClientService,
     private router: Router,
     private route: ActivatedRoute,
-    private flash: FlashMessagesService
+    private flashMessage: FlashMessagesService
   ) { }
 
   ngOnInit(): void {
@@ -43,7 +43,7 @@ export class ClientDetailsComponent implements OnInit {
 
   updateBalance(id: string) {
     this.clientService.updateClient(this.client)
-    this.flash.show('Balance updated', {
+    this.flashMessage.show('Balance updated', {
       cssClass: 'alert-success', timeout: 4000
     });
     this.router.navigate([]);
