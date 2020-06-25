@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'client/add', component: AddClientComponent },
-  { path: 'client/edit:id', component: EditClientComponent },
+  { path: 'client/edit/:id', component: EditClientComponent },
   { path: 'client/:id', component: ClientDetailsComponent },
   { path: 'settings', component: ClientDetailsComponent },
   { path: '**', component: NotFoundComponent },
