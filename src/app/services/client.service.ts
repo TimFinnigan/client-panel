@@ -12,7 +12,7 @@ import { Client } from '../models/Client';
 export class ClientService {
   clientsCollection: AngularFirestoreCollection<Client>;
   clientDoc: AngularFirestoreDocument<Client>;
-  clients: Observable<Client>;
+  clients: Observable<Client[]>;
   client: Observable<Client>;
 
   constructor(private afs: AngularFirestore) {

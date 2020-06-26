@@ -8,7 +8,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 // Below import is not found
-// import { AngularFireAuthModule } from 'angularfire2/firestore/auth';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,9 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ClientService } from './services/client.service';
+import { AuthService } from './services/auth.service';
+
 
 @NgModule({
   declarations: [
@@ -45,10 +48,11 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     FlashMessagesModule.forRoot(),
 
   ],
-  providers: [],
+  providers: [ClientService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
