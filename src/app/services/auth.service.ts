@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +17,9 @@ export class AuthService {
 
   getAuth() {
     return this.afAuth.authState;
+  }
+
+  logout() {
+    this.afAuth.auth.signOut();
   }
 }
