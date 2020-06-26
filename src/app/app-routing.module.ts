@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'client/add', component: AddClientComponent, canActivate: [AuthGuard] },
   { path: 'client/edit/:id', component: EditClientComponent, canActivate: [AuthGuard] },
   { path: 'client/:id', component: ClientDetailsComponent, canActivate: [AuthGuard] },
-  { path: 'settings', component: ClientDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard] },
   { path: '**', component: NotFoundComponent },
 ];
 
