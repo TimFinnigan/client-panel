@@ -25,6 +25,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ClientService } from './services/client.service';
 import { AuthService } from './services/auth.service';
+import { SettingsService } from './services/settings.service';
 
 
 @NgModule({
@@ -52,7 +53,7 @@ import { AuthService } from './services/auth.service';
     FlashMessagesModule.forRoot(),
 
   ],
-  providers: [ClientService, AuthService],
+  providers: [ClientService, AuthService, SettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
